@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Activity liife cycle</string>
+    <string name="time_and_current_state_of_activity">Time And Current State of Activity</string>
+    <string name="next">Next</string>
+    <string name="share_data">Share Data</string>
+</resources>
