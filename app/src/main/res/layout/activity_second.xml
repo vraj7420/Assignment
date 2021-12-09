@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Second_Activity">
+    tools:context=".Second_Activity"
+    android:background="@color/design_default_color_primary_variant">
    <GridView
        android:layout_width="wrap_content"
        android:layout_height="0dp"
@@ -12,7 +13,10 @@
        app:layout_constraintTop_toTopOf="parent"
        android:id="@+id/grid"
        android:numColumns="2"
+       android:horizontalSpacing="10dp"
+       android:verticalSpacing="10dp"
        app:layout_constraintBottom_toTopOf="@id/btnShare"
+
        />
    <Button
        android:layout_width="wrap_content"

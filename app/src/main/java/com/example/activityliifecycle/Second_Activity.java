@@ -23,14 +23,19 @@ public class Second_Activity extends AppCompatActivity {
         btnShare=(Button)findViewById(R.id.btnShare) ;
         Intent i=getIntent();
         stateScondActivity= i.getStringArrayListExtra("list");
-        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,stateScondActivity);
+        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,R.layout.grid_view,stateScondActivity);
         grid.setAdapter(adapter);
         btnShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(Intent.ACTION_SEND);
                 i.setType("text/plain");
-                i.putStringArrayListExtra(Intent.EXTRA_TEXT,stateScondActivity);
+                String listString="";
+                for (String s :stateScondActivity)
+                {
+                    listString += s + "\t";
+                }
+                i.putExtra(Intent.EXTRA_TEXT,listString);
                 startActivity(i);
 
             }
